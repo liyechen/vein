@@ -40,6 +40,9 @@ struct Vector2 {
     float dot(const Vector2 &target) const;
 };
 
+typedef Vector2 Size2;
+typedef Vector2 Point2;
+
 /**
  * operator +
  */

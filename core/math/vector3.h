@@ -41,6 +41,9 @@ struct Vector3 {
     float dot(const Vector3 &target) const;
 };
 
+typedef Vector3 Size3;
+typedef Vector3 Point3;
+
 inline float Vector3::length() const {
     float x2 = x * x;
     float y2 = y * y;
