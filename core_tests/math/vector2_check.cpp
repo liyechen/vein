@@ -23,9 +23,9 @@ TEST(VECTOR2, COORD) {
 TEST(VECTOR2, COPY) {
     Vector2 a(3.0, 4.0);
     Vector2 b(a);
-    bool isTrue = b.x == 3.0 && b.y == 4.0;
+    bool is_true = b.x == 3.0 && b.y == 4.0;
 
-    EXPECT_TRUE(true);
+    EXPECT_TRUE(is_true);
 }
 
 TEST(VECTOR2, LENGTH) {
