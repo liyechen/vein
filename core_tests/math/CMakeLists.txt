@@ -6,7 +6,6 @@ set(SRC
         ../../core/math/vector2.cpp
         ../../core/math/vector3.cpp
         vector2_check.cpp
-        math_check.cpp
         vector3_check.cpp)
 
 add_executable(runMathCheck ${SRC})
