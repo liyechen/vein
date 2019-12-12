@@ -33,16 +33,5 @@ sudo make
 sudo make install
 ```
 
-You can now test the corresponding module in each subfolder.  
-For example:  
-in core/math  
+We use gtest plugin of clion to test.
 
-```sh  
-# in test/math
-# this will test all submodules in core/math
-make test
-
-# in test/math
-# this will test vector2 in core/math
-make test_vector2
-```
