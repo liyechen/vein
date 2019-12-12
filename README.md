@@ -13,7 +13,7 @@ pip install cpplint
 ``` 
 # project root folder
 # after init the githooks, cpplint will run eveny time you commit
-make init
+sh githook.sh
 ```
 
 ## test
