@@ -8,6 +8,8 @@
 #include "gtest/gtest.h"
 #include "vector2.h"
 
+using namespace vein;
+
 TEST(VECTOR2, INIT) {
     Vector2 a;
     EXPECT_FLOAT_EQ(a.x, 0.0);
@@ -118,4 +120,10 @@ TEST(VECTOR2, OPERATOR_MULTI) {
     a *= 3.0;
     EXPECT_FLOAT_EQ(a.x, 3.0);
     EXPECT_FLOAT_EQ(a.y, 6.0);
+}
+
+TEST(VECTOR2, WIDTH_AND_HEIGHT) {
+    Vector2 a(10.0, 11.0);
+    EXPECT_FLOAT_EQ(a.width, 10.0);
+    EXPECT_FLOAT_EQ(a.height, 11.0);
 }

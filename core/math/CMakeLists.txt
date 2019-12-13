@@ -1,3 +1,3 @@
 project(core_math)
 
-add_executable(math_exec vector2.cpp vector3.cpp)
+add_executable(math_exec vector2.cpp vector3.cpp rect2.h)

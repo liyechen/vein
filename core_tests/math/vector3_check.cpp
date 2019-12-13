@@ -8,6 +8,8 @@
 #include "gtest/gtest.h"
 #include "vector3.h"
 
+using namespace vein;
+
 TEST(VECTOR3, INIT) {
     Vector3 a;
     EXPECT_FLOAT_EQ(a.x, 0.0);
