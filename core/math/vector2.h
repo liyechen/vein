@@ -1,6 +1,7 @@
 #ifndef VECTOR2_H
 #define VECTOR2_H
 
+#include <cmath>
 #include "math_funcs.h"
 
 namespace vein {
@@ -54,6 +55,9 @@ namespace vein {
 
         // dot
         float dot(const Vector2 &target) const;
+
+        // distance
+        float distance_to(const Vector2 &target) const;
     };
 
     typedef Vector2 Size2;
@@ -104,41 +108,41 @@ namespace vein {
         y = y * k;
     }
 
-/**
- * vector length
- */
+    /**
+     * vector length
+     */
     inline float Vector2::length() const {
         float x2 = x * x;
         float y2 = y * y;
         return sqrtf(x2 + y2);
     }
 
-/**
- * vector length squared
- */
+    /**
+     * vector length squared
+     */
     inline float Vector2::length_squared() const {
         return x * x + y * y;
     }
 
-/**
- * dot
- */
+    /**
+     * dot
+     */
     inline float Vector2::dot(const Vector2 &target) const {
         return x * target.x + y * target.y;
     }
 
-/**
- * normalize the vector
- */
+    /**
+     * normalize the vector
+     */
     inline Vector2 Vector2::normalized() const {
         Vector2 target = *this;
         target.normalize();
         return target;
     }
 
-/**
- * normalize self
- */
+    /**
+     * normalize self
+     */
     inline void Vector2::normalize() {
         float len = length();
         if (len != 0.0) {
@@ -147,11 +151,18 @@ namespace vein {
         }
     }
 
-/*
- * if is a normalized vector
- */
+    /*
+     * if is a normalized vector
+     */
     inline bool Vector2::is_normalized() const {
         return almost_equal(length(), static_cast<float>(1.0), 2);
+    }
+
+    /*
+     *  distance to another point2
+     */
+    inline float Vector2::distance_to(const struct vein::Vector2 & target) const {
+        return sqrtf(powf(x - target.x, 2.0) + powf(y - target.y, 2.0));
     }
 }
 

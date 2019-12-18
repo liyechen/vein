@@ -122,3 +122,9 @@ TEST(VECTOR3, OPERATOR_MULTI) {
     EXPECT_FLOAT_EQ(a.y, 6.0);
     EXPECT_FLOAT_EQ(a.z, 9.0);
 }
+
+TEST(VECTOR3, DISTANCE_TO) {
+    Vector3 a(3.0, 4.0, 12.0);
+    Vector3 b(0.0, 0.0, 0.0);
+    EXPECT_FLOAT_EQ(a.distance_to(b), 13.0);
+}

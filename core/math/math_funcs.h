@@ -8,7 +8,7 @@
 #ifndef MATH_FUNCS_H
 #define MATH_FUNCS_H
 
-#include <math.h>
+#include <cmath>
 #include <limits>
 
 namespace vein {

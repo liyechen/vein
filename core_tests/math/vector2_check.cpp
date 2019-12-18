@@ -127,3 +127,9 @@ TEST(VECTOR2, WIDTH_AND_HEIGHT) {
     EXPECT_FLOAT_EQ(a.width, 10.0);
     EXPECT_FLOAT_EQ(a.height, 11.0);
 }
+
+TEST(VECTOR2, DISTANCE_TO) {
+    Vector2 a(3.0, 4.0);
+    Vector2 b(0.0, 0.0);
+    EXPECT_FLOAT_EQ(a.distance_to(b), 5.0);
+}

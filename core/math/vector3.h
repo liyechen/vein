@@ -8,6 +8,7 @@
 #ifndef VECTOR3_H
 #define VECTOR3_H
 
+#include <cmath>
 #include "math_funcs.h"
 
 namespace vein {
@@ -51,6 +52,8 @@ namespace vein {
         Vector3 normalized() const;
 
         float dot(const Vector3 &target) const;
+
+        float distance_to(const Vector3 &target) const;
     };
 
     typedef Vector3 Size3;
@@ -134,6 +137,10 @@ namespace vein {
 
     inline float Vector3::dot(const Vector3 &target) const {
         return x * target.x + y * target.y + z * target.z;
+    }
+
+    inline float Vector3::distance_to(const struct vein::Vector3 & target) const {
+        return sqrtf(powf(x - target.x, 2.0) + powf(y - target.y, 2.0) + powf(z - target.z, 2.0));
     }
 
 }
