@@ -8,22 +8,13 @@
 
 namespace vein {
 
-    Vector3::Vector3(void) {
-        x = 0.0;
-        y = 0.0;
-        z = 0.0;
+    Vector3::Vector3(void): x(0.0), y(0.0), z(0.0) {
     }
 
-    Vector3::Vector3(float xx, float yy, float zz) {
-        x = xx;
-        y = yy;
-        z = zz;
+    Vector3::Vector3(float xx, float yy, float zz): x(xx), y(yy), z(zz) {
     }
 
-    Vector3::Vector3(const Vector3 &c) {
-        x = c.x;
-        y = c.y;
-        z = c.z;
+    Vector3::Vector3(const Vector3 &c): x(c.x), y(c.y), z(c.z) {
     }
 
 }
